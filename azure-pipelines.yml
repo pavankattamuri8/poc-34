@@ -1,16 +1,16 @@
 trigger:
 - main
-
+ 
 resources:
 - repo: self
-
+ 
 variables:
   dockerRegistryServiceConnection: 'acr-docker-connection'
   imageRepository: 'poc34-node-app'
   containerRegistry: 'acrpoc34.azurecr.io' 
   dockerfilePath: '$(Build.SourcesDirectory)/Dockerfile'
   tag: '$(Build.BuildId)'
-
+ 
 stages:
 - stage: Build
   displayName: Build and Push Stage
